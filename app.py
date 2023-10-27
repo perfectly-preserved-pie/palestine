@@ -16,8 +16,8 @@ external_stylesheets = [
 
 ]
 
-df = pd.read_parquet('translated.parquet') # Read the JSON files into dataframes 
-
+# Read the translated data from the Parquet file
+df = pd.read_parquet('translated.parquet')
 
 # Generate a unique ID for each row
 df['uuid'] = [str(uuid.uuid4()) for _ in range(len(df))]
